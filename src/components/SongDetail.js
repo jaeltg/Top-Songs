@@ -1,8 +1,13 @@
-const SongDetails = ({title, artist, loaded}) => {
+import './SongDetail.css';
+
+const SongDetails = ({title, artist, preview, image, loaded}) => {
     return (
         <>
             <li>
-                <p>{title} - {artist}</p>
+            <a href={preview}>
+                <img src={image}/>
+            </a>  
+                <p>{title} - {artist}</p>     
             </li>
         </>
     )
